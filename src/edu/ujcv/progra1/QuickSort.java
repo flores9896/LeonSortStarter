@@ -10,7 +10,7 @@ public  class QuickSort  implements SortTester  {
         return end - start;
     }
 
-    public void quick(int[] arr, int primero, int ultimo){
+    public int[] quick(int[] arr, int primero, int ultimo){
         int i ,j ,pivote ,auxiliar;
 
         i = primero;
@@ -44,5 +44,6 @@ public  class QuickSort  implements SortTester  {
 
         }
 
+        return arr;
     }
 }

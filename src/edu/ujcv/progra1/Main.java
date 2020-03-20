@@ -1,34 +1,49 @@
 package edu.ujcv.progra1;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-        MergeSort mre = new MergeSort();
-
-        int[] elementos = {3,2,4,5,6,7,9,9,10,3,5};
-
-//        for (int i = 0; i < elementos.length; i++) {
-//            System.out.println(elementos[i]);
-//        }
-//
-//        System.out.println("-----------------------------------");
-//
-//        mre.sort(elementos,0,elementos.length-1);
-//
-//        for (int i = 0; i < elementos.length; i++) System.out.println(elementos[i]);
-//
-//        System.out.println("\n\ntarda "+ mre.sort(elementos)+ " milisegundos");
+        MergeSort merge = new MergeSort();
+        QuickSort quick = new QuickSort();
+        ShuffleSort shuffle = new ShuffleSort();
+        HeapSort heap = new HeapSort();
 
 
-        ShuffleSort s = new ShuffleSort();
-        elementos = s.shuffleSort(elementos);
 
-        for (int i = 0; i < elementos.length; i++) {
-            System.out.println(elementos[i]);
-        }
 
-        elementos = new int[]{3,2,4,5,6,7,9,9,10,3,5};
-        System.out.println("\n\ntarda "+ s.sort(elementos)+ " milisegundos");
+        RandomArray array = new RandomArray();
+
+
+        int[] elementos = array.randomArray(10);
+        System.out.println("----------------------------------------------------");
+
+        int[] elementosOrdenados = merge.sort(elementos,0,elementos.length-1);
+        int[] elementosOrdenadosQuick = quick.quick(elementos,0,elementos.length-1);
+        int[] elementosOrdenadosShuffle = shuffle.shuffleSort(elementos);
+
+
+        System.out.println("Merge Sort tarda");
+        System.out.println("\n\ntarda "+ merge.sort(elementos)+ " milisegundos");
+
+        System.out.println("----------------------------------------------------");
+
+        System.out.println("Quick Sort tarda");
+        System.out.println("\n\ntarda "+ quick.sort(elementos)+ " milisegundos");
+
+        System.out.println("----------------------------------------------------");
+
+        System.out.println("Shuffle Sort tarda");
+        System.out.println("\n\ntarda "+ shuffle.sort(elementos)+ " milisegundos");
+
+
+
+
+
+
+
+
 
 
 
