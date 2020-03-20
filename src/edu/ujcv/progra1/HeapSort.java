@@ -13,7 +13,7 @@ public class HeapSort implements SortTester {
     }
 
 
-    public void heapSort(int arr[])
+    public int[] heapSort(int[] arr)
     {
         int n = arr.length;
 
@@ -28,6 +28,7 @@ public class HeapSort implements SortTester {
 
             heap(arr, i, 0);
         }
+        return arr;
     }
 
 
