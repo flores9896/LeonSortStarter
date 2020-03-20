@@ -1,5 +1,6 @@
 package edu.ujcv.progra1;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -10,15 +11,18 @@ public class Main {
         //ShuffleSort shuffle = new ShuffleSort();
         HeapSort heap = new HeapSort();
 
-        long[] arrayMerge = new long[11];
-        long[] arrayQuick = new long[11];
-        long[] arrayHeap = new long[11];
+        ArrayList arrayMerge = new ArrayList();
+        ArrayList arrayQuick = new ArrayList();
+        ArrayList arrayHeap = new ArrayList();
+
+
+
+        ArrayList arM = new ArrayList();
 
         long tempMerge;
         long tempQuick;
         long tempHeap;
         RandomArray array = new RandomArray();
-
 
 
 
@@ -39,10 +43,21 @@ public class Main {
             System.out.println("Quick: "+tempQuick);
             System.out.println("------------------");
 
+
+
+
             System.out.println("###########################");
+
+            arrayMerge.add(tempMerge);
+            arrayHeap.add(tempHeap);
+            arrayQuick.add(tempQuick);
+
 
 
         }
+
+        for(int i= 0 ; i>= arrayHeap.size(); i++) System.out.println(arrayHeap.get(i));
+
 
 
 
