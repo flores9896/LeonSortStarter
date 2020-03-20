@@ -1,6 +1,7 @@
 package edu.ujcv.progra1;
 
-public abstract class MergeSort  implements SortTester {
+public  class MergeSort  implements SortTester {
+
     public long merge(int[] array) {
         long start = System.currentTimeMillis();
         sort(array);
@@ -10,73 +11,66 @@ public abstract class MergeSort  implements SortTester {
         return end - start;
     }
 
-    void merge(int arr[], int l, int m, int r){
-//        int l = 0;
-//        int m =
-        int izq = m - l + 1;
-        int derecho = r - m;
+    void merge(int arr[], int l, int m, int r) {
+        // Find sizes of two subarrays to be merged
+        int n1 = m - l + 1;
+        int n2 = r - m;
 
-        int lIzq[] = new int [izq];
-        int lDer[] = new int [derecho];
+        /* Create temp arrays */
+        int L[] = new int[n1];
+        int R[] = new int[n2];
 
-        for (int i=0; i<izq; ++i)
-            lIzq[i] = arr[l + i];
-        for (int j=0; j<derecho; ++j)
-            lDer[j] = arr[m + 1+ j];
+        /*Copy data to temp arrays*/
+        for (int i = 0; i < n1; ++i)
+            L[i] = arr[l + i];
+        for (int j = 0; j < n2; ++j)
+            R[j] = arr[m + 1 + j];
+
 
         int i = 0, j = 0;
+
         int k = l;
-        while (i < izq && j < derecho)
-        {
-            if (lDer[i] <= lIzq[j])
-            {
-                arr[k] = lDer[i];
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
                 i++;
-            }
-            else
-            {
-                arr[k] = lIzq[j];
+            } else {
+                arr[k] = R[j];
                 j++;
             }
             k++;
         }
 
-        while (i < izq)
-        {
-            arr[k] = lDer[i];
+        while (i < n1) {
+            arr[k] = L[i];
             i++;
             k++;
         }
 
-        while (j < derecho)
-        {
-            arr[k] = lIzq[j];
+        while (j < n2) {
+            arr[k] = R[j];
             j++;
             k++;
         }
-
-
-
     }
-    void Sort(int arr[]) {
-        int l = 0;
-        int r = arr.length;
-        if (l < r)
-        {
-            int m = (l+r)/2;
 
-            Sort(arr);
-            Sort(arr);
+    void sort(int arr[], int l, int r) {
+        if (l < r) {
+            int m = (l + r) / 2;
+
+            sort(arr, l, m);
+            sort(arr, m + 1, r);
 
             merge(arr, l, m, r);
         }
+
+
     }
 
-
-
-
-
-
+    @Override
+    public long sort(int[] array) {
+        return 0;
+    }
 }
 
 
