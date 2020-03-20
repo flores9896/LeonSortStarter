@@ -5,8 +5,8 @@ import java.util.Random;
 public class RandomArray {
     Random random = new Random();
 
-    int[] randomArray(double tamano){
-        int[] arr = new int[(int) tamano];
+    int[] randomArray(int tamano){
+        int[] arr = new int[tamano];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt();
 
