@@ -1,7 +1,16 @@
 package edu.ujcv.progra1;
 
-public class QuickSort {
-    public void quick(int[] arr , int primero , int ultimo){
+public  class QuickSort  implements SortTester  {
+    public long sort(int[] array) {
+        long start = System.currentTimeMillis();
+        quick(array, 0,array.length);
+
+        long end = System.currentTimeMillis();
+
+        return end - start;
+    }
+
+    public void quick(int[] arr, int primero, int ultimo){
         int i ,j ,pivote ,auxiliar;
 
         i = primero;

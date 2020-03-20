@@ -15,9 +15,10 @@ public class Main {
         System.out.println("-----------------------------------------------");
 //
 //        elementos = new int[]{3,2,4,5,6,7,9,9,10,3,5};
-//        System.out.println("\n\ntarda "+ s.sort(elementos)+ " milisegundos");
+
 
         QuickSort quick = new QuickSort();
+        System.out.println("\n\ntarda "+ quick.sort(elementos)+ " milisegundos");
 
         quick.quick(elementos,0,elementos.length-1);
         for (int i = 0; i < elementos.length; i++) {
