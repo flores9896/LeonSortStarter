@@ -31,11 +31,12 @@ public class Main {
             tempHeap = heap.sort(arr);
             tempQuick = quick.sort(arr);
 
-            System.out.println(tempMerge);
+            System.out.println("Con "+ i+" elementos en el array" );
+            System.out.println("Merge: "+tempMerge);
             System.out.println("------------------");
-            System.out.println(tempHeap);
+            System.out.println("Heap: "+tempHeap);
             System.out.println("------------------");
-            System.out.println(tempQuick);
+            System.out.println("Quick: "+tempQuick);
             System.out.println("------------------");
 
             System.out.println("###########################");
