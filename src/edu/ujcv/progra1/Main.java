@@ -23,26 +23,26 @@ public class Main {
 
 
 
-        for (int i = 10 ; i<=1000000000; i= i*10){
-            int[] arr = array.randomArray(i);
+        for (int i = 10 ; i<=100000000; i= i*10){
+            int[] arr;
+            arr = array.randomArray(i);
 
             tempMerge = merge.sort(arr);
             tempHeap = heap.sort(arr);
             tempQuick = quick.sort(arr);
 
-            for (int x= 0 ; x<=arr.length-1; x++){
+            System.out.println(tempMerge);
+            System.out.println("------------------");
+            System.out.println(tempHeap);
+            System.out.println("------------------");
+            System.out.println(tempQuick);
+            System.out.println("------------------");
 
-                arrayMerge[x] = tempMerge;
-                arrayHeap[x] = tempHeap;
-                arrayQuick[x] = tempQuick;
-            }
+            System.out.println("###########################");
+
 
         }
 
-
-        for (int j=0; j>=arrayHeap.length-1; j++){
-            System.out.println(arrayHeap[j]);
-        }
 
 
 
