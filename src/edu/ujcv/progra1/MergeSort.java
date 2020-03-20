@@ -1,25 +1,19 @@
 package edu.ujcv.progra1;
 
-public class MergeSort  implements SortTester{
-    @Override
-    public long sort(int[] array) {
+public abstract class MergeSort  implements SortTester {
+    public long merge(int[] array) {
         long start = System.currentTimeMillis();
-        mergeSort(array);
+        //mergeSort(array);
 
         long end = System.currentTimeMillis();
 
         return end - start;
     }
 
-    public static int[] mergeSort(int[] a){
 
-
-        return new int[5];
-    }
-
-    public static int[] merge(int[] inf, int[] sup ){
-        return new int[5];
-    }
 
 
 }
+
+
+
