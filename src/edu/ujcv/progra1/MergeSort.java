@@ -12,6 +12,8 @@ public class MergeSort  implements SortTester{
     }
 
     public static int[] mergeSort(int[] a){
+
+
         return new int[5];
     }
 
