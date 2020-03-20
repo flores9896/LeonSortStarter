@@ -3,7 +3,7 @@ package edu.ujcv.progra1;
 public  class QuickSort  implements SortTester  {
     public long sort(int[] array) {
         long start = System.currentTimeMillis();
-        quick(array, 0,array.length);
+        quick(array, 0,array.length-1);
 
         long end = System.currentTimeMillis();
 

@@ -18,12 +18,17 @@ public class Main {
 
 
         QuickSort quick = new QuickSort();
-        System.out.println("\n\ntarda "+ quick.sort(elementos)+ " milisegundos");
+
 
         quick.quick(elementos,0,elementos.length-1);
         for (int i = 0; i < elementos.length; i++) {
             System.out.println(elementos[i]);
         }
+
+
+        System.out.println("-----------------------------------------------");
+        System.out.println("\n\ntarda "+ quick.sort(elementos)+ " milisegundos");
+
 
     }
 }
