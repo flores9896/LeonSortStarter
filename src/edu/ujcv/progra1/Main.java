@@ -1,7 +1,6 @@
 package edu.ujcv.progra1;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Main {
 
@@ -55,25 +54,16 @@ public class Main {
 
         }
 
-        float contadorMerge=0;
-        float contadorHeap=0;
-        float contadorQuick=0;
-        for (int i=0; i<=arrayHeap.length-1;i++) {
-            contadorMerge = arrayMerge[i]+contadorMerge;
-            contadorHeap = arrayMerge[i]+contadorHeap;
-            contadorQuick = arrayMerge[i]+contadorQuick;
-        }
+        Promedio promedio = new Promedio();
 
-        float promedioMerge = contadorMerge/(arrayMerge.length-1);
-        float promedioHeap = contadorMerge/(arrayHeap.length-1);
-        float promedioQuick = contadorMerge/(arrayQuick.length-1);
+
 
         System.out.println("========================================================");
-        System.out.println("|Promedio del MergeSort:" + promedioMerge+ "ms         |" );
+        System.out.println("|Promedio del MergeSort:" + promedio.promedio(arrayMerge)+ "ms                            |" );
         System.out.println("|                                                      |");
-        System.out.println("|Promedio del QuickSort:" + promedioQuick+ "ms         |");
+        System.out.println("|Promedio del QuickSort:" + promedio.promedio(arrayQuick)+ "ms                          |");
         System.out.println("|                                                      |");
-        System.out.println("|Promedio del HeapSort:" + promedioHeap+ "ms"+"        |" );
+        System.out.println("|Promedio del HeapSort:" + promedio.promedio(arrayHeap)+ "ms"+"                          |" );
         System.out.println("|______________________________________________________|");
 
     }
