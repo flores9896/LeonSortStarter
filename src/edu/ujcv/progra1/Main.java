@@ -54,10 +54,10 @@ public class Main {
 
 
 
-            System.out.println(position);
-//            arrayMerge[i/10] = tempMerge;
-//            arrayHeap[i/10] = tempHeap;
-//            arrayQuick[i/10]= tempQuick;
+
+            arrayMerge[position-1] = tempMerge;
+            arrayHeap[position-1] = tempHeap;
+            arrayQuick[position-1]= tempQuick;
 
 
 
@@ -65,7 +65,7 @@ public class Main {
         }
 
 
-        for (int i=0; i<=11;i++) {
+        for (int i=0; i<=arrayHeap.length-1;i++) {
             System.out.println(arrayHeap[i]);
         }
 
