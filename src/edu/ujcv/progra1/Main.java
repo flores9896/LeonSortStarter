@@ -11,9 +11,9 @@ public class Main {
         //ShuffleSort shuffle = new ShuffleSort();
         HeapSort heap = new HeapSort();
 
-        ArrayList arrayMerge = new ArrayList();
-        ArrayList arrayQuick = new ArrayList();
-        ArrayList arrayHeap = new ArrayList();
+        long arrayMerge[] = new long[8];
+        long arrayQuick[] = new long[8];
+        long arrayHeap[] = new long[8];
 
 
 
@@ -24,11 +24,15 @@ public class Main {
         long tempHeap;
         RandomArray array = new RandomArray();
 
+        int position = 0;
+
 
 
 
         for (int i = 10 ; i<=100000000; i= i*10){
             int[] arr;
+            position++;
+
             arr = array.randomArray(i);
 
             tempMerge = merge.sort(arr);
@@ -48,15 +52,22 @@ public class Main {
 
             System.out.println("###########################");
 
-            arrayMerge.add(tempMerge);
-            arrayHeap.add(tempHeap);
-            arrayQuick.add(tempQuick);
+
+
+            System.out.println(position);
+//            arrayMerge[i/10] = tempMerge;
+//            arrayHeap[i/10] = tempHeap;
+//            arrayQuick[i/10]= tempQuick;
+
 
 
 
         }
 
-        for(int i= 0 ; i>= arrayHeap.size(); i++) System.out.println(arrayHeap.get(i));
+
+        for (int i=0; i<=11;i++) {
+            System.out.println(arrayHeap[i]);
+        }
 
 
 
