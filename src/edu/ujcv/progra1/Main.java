@@ -27,14 +27,11 @@ public class Main {
         int position = 0;
 
 
-
-
         for (int i = 10 ; i<=100000000; i= i*10){
             int[] arr;
             position++;
 
             arr = array.randomArray(i);
-
             tempMerge = merge.sort(arr);
             tempHeap = heap.sort(arr);
             tempQuick = quick.sort(arr);
@@ -46,13 +43,7 @@ public class Main {
             System.out.println("------------------");
             System.out.println("Quick: "+tempQuick);
             System.out.println("------------------");
-
-
-
-
             System.out.println("###########################");
-
-
 
 
             arrayMerge[position-1] = tempMerge;
@@ -64,58 +55,26 @@ public class Main {
 
         }
 
-
+        float contadorMerge=0;
+        float contadorHeap=0;
+        float contadorQuick=0;
         for (int i=0; i<=arrayHeap.length-1;i++) {
-            System.out.println(arrayHeap[i]);
+            contadorMerge = arrayMerge[i]+contadorMerge;
+            contadorHeap = arrayMerge[i]+contadorHeap;
+            contadorQuick = arrayMerge[i]+contadorQuick;
         }
 
+        float promedioMerge = contadorMerge/(arrayMerge.length-1);
+        float promedioHeap = contadorMerge/(arrayHeap.length-1);
+        float promedioQuick = contadorMerge/(arrayQuick.length-1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//
-//
-//        System.out.println("----------------------------------------------------");
-//
-//        int[] elementosOrdenadosMerge = merge.sort(elementos,0,elementos.length-1);
-//        int[] elementosOrdenadosQuick = quick.quick(elementos,0,elementos.length-1);
-//        //int[] elementosOrdenadosShuffle = shuffle.shuffleSort(elementos);
-//        int[] elementosOrdenadosHeap = heap.heapSort(elementos);
-//
-//
-
-//
-//        System.out.println("Quick Sort tarda");
-//        System.out.println("\n\ntarda "+ quick.sort(elementos)+ " milisegundos");
-//
-//        System.out.println("----------------------------------------------------");
-//
-//        System.out.println("Heap Sort tarda");
-//        System.out.println("\n\ntarda "+ heap.sort(elementos)+ " milisegundos");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
+        System.out.println("========================================================");
+        System.out.println("|Promedio del MergeSort:" + promedioMerge+ "ms         |" );
+        System.out.println("|                                                      |");
+        System.out.println("|Promedio del QuickSort:" + promedioQuick+ "ms         |");
+        System.out.println("|                                                      |");
+        System.out.println("|Promedio del HeapSort:" + promedioHeap+ "ms"+"        |" );
+        System.out.println("|______________________________________________________|");
 
     }
 }
