@@ -59,11 +59,11 @@ public class Main {
 
 
         System.out.println("========================================================");
-        System.out.println("|Promedio del MergeSort:" + promedio.promedio(arrayMerge)+ "ms                            |" );
+        System.out.println("|Promedio del MergeSort: " + promedio.promedio(arrayMerge)+ "ms                           |" );
         System.out.println("|                                                      |");
-        System.out.println("|Promedio del QuickSort:" + promedio.promedio(arrayQuick)+ "ms                          |");
+        System.out.println("|Promedio del QuickSort: " + promedio.promedio(arrayQuick)+ "ms                         |");
         System.out.println("|                                                      |");
-        System.out.println("|Promedio del HeapSort:" + promedio.promedio(arrayHeap)+ "ms"+"                          |" );
+        System.out.println("|Promedio del HeapSort: " + promedio.promedio(arrayHeap)+ "ms"+"                         |" );
         System.out.println("|______________________________________________________|");
 
     }
